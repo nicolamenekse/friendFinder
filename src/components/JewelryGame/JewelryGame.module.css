@@ -1,0 +1,127 @@
+.gameContainer {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-color: #2c3e50;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameInfo {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ecf0f1;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.gameArea {
+  position: relative;
+  background-color: #34495e;
+  border: 2px solid #ecf0f1;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.snakeSegment {
+  position: absolute;
+  background-color: #2ecc71;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+}
+
+.snakeSegment:first-child {
+  background-color: #27ae60;
+  border-radius: 5px;
+}
+
+.food {
+  position: absolute;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+  animation: pulse 1s infinite;
+}
+
+.startButton {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 20px auto;
+  display: block;
+}
+
+.startButton:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.gameOver {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(44, 62, 80, 0.95);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+  color: #ecf0f1;
+  border: 2px solid #ecf0f1;
+}
+
+.gameOver h3 {
+  color: #e74c3c;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.gameOver p {
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
+.restartButton {
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.restartButton:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

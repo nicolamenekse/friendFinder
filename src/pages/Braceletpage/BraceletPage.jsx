@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectProducts } from '../redux/selectors';
-import { fetchProducts } from '../redux/operations';
+import { selectProducts } from '../../redux/selectors';
+import { fetchProducts } from '../../redux/operations';
 import { useNavigate } from 'react-router-dom';
 import css from './BraceletPage.module.css';
 

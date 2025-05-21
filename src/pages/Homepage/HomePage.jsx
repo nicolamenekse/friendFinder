@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styles from "./HomePage.module.css";
 import { useDispatch } from "react-redux";
-import { fetchProducts } from "../redux/operations";
+import { fetchProducts } from "../../redux/operations";
 import { Link } from "react-router-dom";
+import JewelryGame from "../../components/JewelryGame/JewelryGame";
+
+// Retro fontları import et
+import '@fontsource/press-start-2p';
+import '@fontsource/vt323';
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -134,6 +139,14 @@ const HomePage = () => {
             <button type="submit">Abone Ol</button>
           </form>
         </div>
+      </section>
+
+      <section className={styles.gameSection}>
+        <h2 className={styles.allProductsTitle}>Kazanmak için Yılanı Besle !</h2>
+        <p className={styles.gameDescription}>
+          1000 puan toplayarak 10 TL'lik kupon kazanma şansı yakalayın!
+        </p>
+        <JewelryGame />
       </section>
     </div>
   );

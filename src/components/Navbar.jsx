@@ -22,10 +22,13 @@ const Navbar = () => {
     navigate(`/product/${productId}`);
   };
 
-  const filteredProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    product.description.toLowerCase().includes(searchQuery.toLowerCase())
-  ).slice(0, 5); // En fazla 5 sonuç göster
+  const filteredProducts = products
+    .filter(
+      (product) =>
+        product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .slice(0, 5); // En fazla 5 sonuç göster
 
   return (
     <div className={css.navbarContainer}>

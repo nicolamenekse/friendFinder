@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectProducts } from '../redux/selectors';
+import { selectProducts } from '../../redux/selectors';
 import css from './ProductDetail.module.css';
 
 export default function ProductDetail() {

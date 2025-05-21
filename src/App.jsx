@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/Homepage/HomePage";
 import Navbar from "./components/Navbar";
-import AllProductsPage from "./pages/AllProductsPage";
-import NecklacePage from "./pages/NecklacePage";
-import BraceletPage from "./pages/BraceletPage";
+import AllProductsPage from "./pages/Allproductspage/AllProductsPage";
+import NecklacePage from "./pages/Necklacepage/NecklacePage";
+import BraceletPage from "./pages/Braceletpage/BraceletPage";
 import OurMission from "./components/OurMission";
-import ProductDetail from "./pages/ProductDetail";
+import ProductDetail from "./pages/Product-detail-page/ProductDetail";
 import './App.css';
 
 export default function App() {

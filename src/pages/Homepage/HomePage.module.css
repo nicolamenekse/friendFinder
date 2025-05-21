@@ -302,3 +302,89 @@
     width: 100%;
   }
 }
+
+.gameSection {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gameSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(0deg, rgba(255,255,255,0.1) 1px, transparent 1px) 0 0 / 20px 20px;
+  pointer-events: none;
+}
+
+.gameSection h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-family: 'Press Start 2P', cursive;
+}
+
+.gameDescription {
+  color: #81D8D0;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  font-family: 'VT323', monospace;
+}
+
+.gameSection::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    #81D8D0,
+    #81D8D0 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.gameSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.1) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  animation: scanline 8s linear infinite;
+  opacity: 0.3;
+}
